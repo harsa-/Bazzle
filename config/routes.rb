@@ -1,4 +1,10 @@
 Bazzle::Application.routes.draw do
+  resources :channels
+
+  resources :messages
+  
+  root :to => 'channel#index', :as => 'channel'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
