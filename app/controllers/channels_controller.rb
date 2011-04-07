@@ -14,6 +14,9 @@ class ChannelsController < ApplicationController
   # GET /channels/1.xml
   def show
     @channel = Channel.find(params[:id])
+    @messages = Message.all
+    @message = Message.new
+    # Message.find_by_channel_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,3 +1,5 @@
+WHII
+
 <%= form_for(@message) do |f| %>
   <% if @message.errors.any? %>
     <div id="error_explanation">
@@ -14,14 +16,6 @@
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :session_id %><br />
-    <%= f.text_field :session_id %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,4 +1,7 @@
-<div class="channel_title"><%= channel.title %></div
+<div class="channel_title"><strong><%= channel.title %></strong></div>
 
-<table>
-  <%= render (channel.messages) %>
+<% @messages.each do |message| %>
+  <% @message = message %>
+  <%= render @message %>
+  <br />
+<% end %>

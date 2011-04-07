@@ -25,6 +25,8 @@ class MessagesController < ApplicationController
   # GET /messages/new.xml
   def new
     @message = Message.new
+    created_at = Time.now
+    channel_id = 1
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +42,10 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.xml
   def create
+    # @channel = 
     @message = Message.new(params[:message])
+    @message.created_at = Time.now
+    @message.channel_id = 1
 
     respond_to do |format|
       if @message.save

@@ -3,6 +3,7 @@ class CreateChannels < ActiveRecord::Migration
     create_table :channels do |t|
       t.string :title, :limit => 50
       t.string :url
+      t.string :channel_id
 
       t.timestamps
     end
